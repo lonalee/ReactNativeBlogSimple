@@ -12,7 +12,7 @@ const IndexScreen = () => {
                 Index Screen
             </Text>
             <Text> </Text>
-            <Button onPress={addBlogPost} title="ADD STH" />
+            <Button onPress={addBlogPost} title="ADD STH !!" />
             <Text> </Text>
             <FlatList
              data={data}
