@@ -4,7 +4,7 @@ import React from 'react'
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import IndexScreen from './src/screens/IndexScreen';
-import { BlogProvider } from './src/context/BlogContext'
+import { Provider } from './src/context/BlogContext'
 
 // createStackNavigator 메소드의 두번째 인자는 설정 옵션
 const navigator = createStackNavigator({
@@ -21,6 +21,6 @@ const navigator = createStackNavigator({
 const App = createAppContainer(navigator);
 
 export default () => {
-  return <BlogProvider><App /></BlogProvider>
+  return <Provider><App /></Provider>
   // App Component to be in the children prop
 }
