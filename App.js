@@ -4,12 +4,17 @@ import React from 'react'
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import IndexScreen from './src/screens/IndexScreen';
+import ShowScreen from './src/screens/ShowScreen';
 import { Provider } from './src/context/BlogContext'
 
 // createStackNavigator 메소드의 두번째 인자는 설정 옵션
-const navigator = createStackNavigator({
-  Index: IndexScreen
-}, {
+
+const navigator = createStackNavigator(
+  { // router configuration object
+    Index: IndexScreen,
+    Show: ShowScreen
+  }, 
+  {
   initialRouteNamd: 'Index',
   defaultNavigationOptions: {
     title: 'BLOGS'

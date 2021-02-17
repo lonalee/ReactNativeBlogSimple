@@ -10,9 +10,7 @@ const blogReducer = (state, action) => {
                     title : `Blog Post #${state.length + 1}`
                 }]
         case 'Delete_Blog_Post':
-            return [
-                ...state.filter(blog => blog.id !== action.targetId)
-            ]
+            return state.filter(blog => blog.id !== action.targetId)
     
         default:
             return state;
